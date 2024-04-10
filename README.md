@@ -1,5 +1,5 @@
 # Project Name: Accelerated Keyword Spotting on Caravel SoC
-[Overview](#overview) | [Objectives](#objectives) | [Prompt Methodology](#prompt-methodology) | [Architecture](#architecture) | [Getting Started](#getting-started) | [Contributing](#contributing) | [License](#license) | [Acknowledgments](#acknowledgments)
+[Overview](#overview) | [Objectives](#objectives) | [Prompt Methodology](#prompt-methodology) | [Architecture](#architecture) | [Machine Learning Model](#machine-learning-model) | [License](#license) | [Acknowledgments](#acknowledgments)
 
 ## Overview
 This project integrates a Rockchip processor and Gemmini core with the Caravel SoC's RISC-V CPU via the Wishbone bus, focusing on creating an energy-efficient hardware accelerator for Keyword Spotting (KWS) applications.
@@ -49,31 +49,11 @@ Explains how we measure the completeness of our testing and verification efforts
 ### Performance Profiling
 Details the techniques used to analyze the system's performance, identify bottlenecks, and optimize efficiency.
 
-## Component Overview
-- **Rockchip Processor**: Serves as the primary processing unit, handling complex computational tasks.
-- **Gemmini Core**: Accelerates matrix multiplication operations essential for DNNs. Now enhanced with:
-    - **Full-System Visibility**: Allows comprehensive monitoring of system operations.
-    - **Full-Stack Visibility**: Provides insight into the entire software stack's performance.
-    - **Programming Model**: Describes the model used for developing software that leverages the Gemmini core.
-- **Caravel SoC and Wishbone Bus**: Facilitates communication and integration of components within the system.
-
-## Getting Started
-Follow these steps to set up the project environment and begin development.
-
-### Prerequisites
-List of necessary tools, libraries, and hardware.
-
-### Installation
-Step-by-step guide for setting up the project.
-
-## Usage
-Instructions on how to deploy and utilize the system for KWS applications.
-
-## Contributing
-Guidelines for contributing to the project, including coding standards, pull request procedures, and how to report bugs.
+## Machine Learning Model
+Discuss the machine learning model used in this project, including its design, optimization for the Gemmini core, and any unique features or challenges associated with its implementation and integration into the overall system.
 
 ## License
-Details of the project's open-source license.
+This project is open source under the Apache License 2.0. For more details, see the LICENSE file in the project repository.
 
 ## Acknowledgments
 Recognition of contributions from individuals, organizations, and projects.
