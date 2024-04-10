@@ -79,14 +79,18 @@ Gemmini's architecture supports different dataflow optimizations to accommodate 
 ![Dataflow Optimizations in Gemmini](/images/dataflow.png)
 
 ### Dimensions
-Our discussions have emphasized that the dimensions of the hardware and software components significantly influence the system's overall capabilities. The size of the hardware components, such as the systolic array in Gemmini, directly correlates with the computational power and throughput. Complexity arises from the integration of multiple components and the need for precise timing and control logic. Scalability is a key design feature, allowing the system to adapt to different KWS models and workloads, ensuring that our accelerator can meet both current and future demands without requiring complete redesigns.
-
+The dimensions of the hardware and software components significantly influence the system's overall capabilities. The size of the hardware components, such as the systolic array in Gemmini, directly correlates with the computational power and throughput. Complexity arises from the integration of multiple components and the need for precise timing and control logic. Scalability is a key design feature, allowing the system to adapt to different KWS models and workloads, ensuring that our accelerator can meet both current and future demands without requiring complete redesigns.
 
 ### Pipelining
-Describes how tasks are divided and processed in parallel to improve efficiency.
+Pipelining is a crucial feature in Gemmini that enhances the execution of matrix multiplication operations, a common task in deep learning models. By effectively using pipelining, Gemmini can overlap the execution of multiple instructions, which helps to utilize the hardware more efficiently and increase the throughput. Specifically, Gemmini leverages memories that hold the same data across different pipeline stages to improve energy consumption. This approach reduces the need for repeated memory accesses for the same data, thus saving power and time, and it is particularly effective in deep neural network computations where such data reusability is common.
 
-### Host CPU
-Discusses the role of the Caravel SoC's RISC-V CPU in managing and coordinating tasks.
+![Gemmini Pipelining](/images/pipelines.png)
+
+### Application Core
+The Chipyard CPU, serving as the application core in our system, plays an instrumental role in managing and coordinating tasks. It orchestrates the data flow, controls the execution of instructions, and handles the interface between the software and the Gemmini accelerator. This integration enables efficient use of the Gemmini's systolic array architecture, ensuring that operations are performed with optimal timing and resource utilization. The Chipyard CPU thus acts as the central control unit that aligns the software's computational needs with the hardware's processing capabilities, enabling our KWS accelerator to achieve high efficiency and performance.
+
+![Gemmini and Application Core Integration](/images/gemmini_arch.png)
+
 
 ### Config Files
 Outlines the configuration files used to customize the system's operation for various use cases.
