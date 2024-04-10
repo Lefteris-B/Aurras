@@ -8,6 +8,7 @@ A cornerstone of our approach is the novel application of Large Language Models 
 
 The integration of LLMs for configuration generation represents a groundbreaking approach to hardware design, promising to streamline the development process and unlock new efficiencies in the creation of specialized computing solutions. This project not only aims to advance the field of embedded AI applications but also to establish a new paradigm for leveraging generative AI in hardware development.
 
+[Back to Top](# Aurras: Accelerated Keyword Spotting on Caravel SoC)
 
 
 
@@ -36,6 +37,8 @@ The primary goals of this project are to demonstrate state-of-the-art capabiliti
 
 By meeting these objectives, we aim to push the boundaries of what's possible in embedded AI applications, providing a versatile, efficient, and accessible platform for research and development in the field of keyword spotting and beyond.
 
+[Back to Top](# Aurras: Accelerated Keyword Spotting on Caravel SoC)
+
 ## Prompt Methodology
 The Prompt Methodology is a central aspect of our approach to leveraging generative AI within the hardware design process. We use advanced prompt engineering techniques to facilitate complex reasoning and context-aware responses from the AI models, tailored specifically for digital design tasks.
 
@@ -62,6 +65,7 @@ The main intent of this process is to gather a sequence of steps with an intent 
 
 For a deeper understanding of the techniques used, please refer to the paper by J. Wei et al.: “Chain-of-Thought Prompting Elicits Reasoning in Large Language Models,” 2022, doi: [10.48550/ARXIV.2201.11903](https://doi.org/10.48550/ARXIV.2201.11903).
 
+[Back to Top](# Aurras: Accelerated Keyword Spotting on Caravel SoC)
 
 ## Architecture
 The architecture of our hardware accelerator is meticulously designed to balance performance, efficiency, and scalability. It is crucial for enabling the complex computations required for Keyword Spotting (KWS) while maintaining energy efficiency and optimizing the use of silicon area.
@@ -116,7 +120,7 @@ Verification is a critical step to ensure that our system not only meets the des
 ### Functional Coverage
 Functional coverage is a metric used to assess the completeness of our testing and verification efforts. By defining a set of functional scenarios that the system should be able to handle, we can measure how many of these scenarios have been successfully tested. This not only ensures that all features are covered but also helps to identify any gaps in the test plan. In this project, functional coverage provides us with the confidence that our KWS accelerator has been rigorously tested and is ready for deployment. We track coverage statistics to pinpoint which aspects of the design have been thoroughly verified and which may require additional testing and/or optimization.
 
-## Hardware acceleration
+### Hardware acceleration
 
 By using the Chipyard framework, in conjunction with Gemmini,  as a hardware abstraction layer we provide a versatile platform for the end-to-end optimization of the accelerator. 
 
@@ -124,7 +128,7 @@ With a custom compiler stack, the mapping of neural network layers to the DNN ac
 
 ![Hardware Optimization with Chipyard and Gemmini](/images/optimization.png)
 
-## Core-to-Core Communication: Orchestrating Data Transfer
+### Core-to-Core Communication: Orchestrating Data Transfer
 
 Effective communication between the application core and the management core is crucial for the smooth operation of any SoC. In our design, the application core—the primary processor handling KWS tasks—communicates with the management core, which oversees the coordination and management of system resources.
 
@@ -132,12 +136,19 @@ Using the Wishbone bus, a time-tested and reliable standard for SoC interconnect
 
 Through this communication framework, the application core can offload data processing tasks to the Gemmini accelerator and then coordinate with the management core to handle interrupts, manage power, and oversee other system-wide tasks. This collaboration ensures that the accelerator can function at its highest efficiency without being bottlenecked by data transfer limitations.
 
+[Back to Top](# Aurras: Accelerated Keyword Spotting on Caravel SoC)
 
 ## Machine Learning Model
 Discuss the machine learning model used in this project, including its design, optimization for the Gemmini core, and any unique features or challenges associated with its implementation and integration into the overall system.
 
+[Back to Top](# Aurras: Accelerated Keyword Spotting on Caravel SoC)
+
 ## License
 This project is open source under the Apache License 2.0. For more details, see the LICENSE file in the project repository.
 
+[Back to Top](# Aurras: Accelerated Keyword Spotting on Caravel SoC)
+
 ## Acknowledgments
 Recognition of contributions from individuals, organizations, and projects.
+
+[Back to Top](# Aurras: Accelerated Keyword Spotting on Caravel SoC)
