@@ -1,5 +1,5 @@
-# Project Name: Accelerated Keyword Spotting on Caravel SoC
-[Overview](#overview) | [Objectives](#objectives) | [Architecture](#architecture) | [Getting Started](#getting-started) | [Contributing](#contributing) | [License](#license) | [Acknowledgments](#acknowledgments) | [Contact Information](#contact-information)
+# Aurras: Accelerated Keyword Spotting on Caravel SoC
+[Overview](#overview) | [Objectives](#objectives) | [Architecture](#architecture) | [Getting Started](#getting-started) | [Contributing](#contributing) | [License](#license) | [Acknowledgments](#acknowledgments) | [Contact](#contact)
 
 ## Overview
 This project integrates a Rockchip processor and Gemmini core with the Caravel SoC's RISC-V CPU via the Wishbone bus, focusing on creating an energy-efficient hardware accelerator for Keyword Spotting (KWS) applications.
