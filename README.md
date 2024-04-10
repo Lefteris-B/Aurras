@@ -1,4 +1,4 @@
-# Project Name: Accelerated Keyword Spotting on Caravel SoC
+# Aurras: Accelerated Keyword Spotting on Caravel SoC
 [Overview](#overview) | [Objectives](#objectives) | [Prompt Methodology](#prompt-methodology) | [Architecture](#architecture) | [Machine Learning Model](#machine-learning-model) | [License](#license) | [Acknowledgments](#acknowledgments)
 
 ## Overview
