@@ -12,10 +12,29 @@ The integration of LLMs for configuration generation represents a groundbreaking
 
 
 ## Objectives
-- **High Performance**: Utilize the computational capabilities of Rockchip and Gemmini for KWS.
-- **Energy Efficiency**: Optimize for low power consumption.
-- **Integration**: Ensure seamless component interaction through the Wishbone bus.
-- **Open Source**: Develop and maintain as an open-source project.
+The primary goals of this project are to demonstrate state-of-the-art capabilities in hardware acceleration for Keyword Spotting (KWS) applications, leveraging the Caravel System-on-Chip with an innovative integration of generative AI, Chipyard, and Gemmini. Our key objectives include:
+
+- **High Performance**: Achieve unparalleled processing speed and response time for KWS applications, making real-time processing feasible even on resource-constrained devices.
+
+- **Optimized Area**: Efficiently utilize the available silicon area to maximize the functionality and performance of the KWS accelerator within the spatial constraints of the Caravel SoC.
+
+- **Energy Efficiency**: Minimize power consumption to extend battery life in portable devices and reduce the carbon footprint of computing infrastructure, making our solution ideal for sustainable technology development.
+
+- **Verified Architecture**: Employ rigorous verification methodologies to ensure the architecture is robust, reliable, and capable of meeting the demands of complex KWS tasks under various conditions.
+
+- **Integration**: Seamlessly integrate with the Caravel SoC environment, ensuring compatibility and cohesiveness across hardware and software components.
+
+- **Full System Visibility**: Provide comprehensive monitoring capabilities at the system level to enable detailed performance analysis and troubleshooting.
+
+- **Full Stack Visibility**: Extend visibility into the software stack, allowing developers and researchers to optimize applications and system software for maximum efficiency.
+
+- **Programmability**: Ensure ease of programming and flexibility in deploying various KWS models and algorithms, enabling rapid prototyping and iteration.
+
+- **Usage Of High-Level Runtimes**: Support high-level runtimes such as ONNX, TensorFlow, and PyTorch, facilitating the use of cutting-edge AI models and frameworks in KWS applications.
+
+- **Open Source**: Commit to an open-source model, fostering community collaboration, transparency, and the democratization of AI and hardware innovation.
+
+By meeting these objectives, we aim to push the boundaries of what's possible in embedded AI applications, providing a versatile, efficient, and accessible platform for research and development in the field of keyword spotting and beyond.
 
 ## Prompt Methodology
 This section explores the strategies and designs behind the AI prompts used in our project, emphasizing their role in achieving efficient and effective AI interactions.
