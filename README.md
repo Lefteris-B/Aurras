@@ -124,6 +124,14 @@ With a custom compiler stack, the mapping of neural network layers to the DNN ac
 
 ![Hardware Optimization with Chipyard and Gemmini](/images/optimization.png)
 
+## Core-to-Core Communication: Orchestrating Data Transfer
+
+Effective communication between the application core and the management core is crucial for the smooth operation of any SoC. In our design, the application core—the primary processor handling KWS tasks—communicates with the management core, which oversees the coordination and management of system resources.
+
+Using the Wishbone bus, a time-tested and reliable standard for SoC interconnect, our system facilitates the transfer of data between the application core and Caravel's management core. This bus architecture is designed to handle high-throughput data transfers with minimal latency, making it an excellent choice for systems where data must move quickly and reliably. It supports a range of transfer types, from simple point-to-point to more complex burst transfers.
+
+Through this communication framework, the application core can offload data processing tasks to the Gemmini accelerator and then coordinate with the management core to handle interrupts, manage power, and oversee other system-wide tasks. This collaboration ensures that the accelerator can function at its highest efficiency without being bottlenecked by data transfer limitations.
+
 
 ## Machine Learning Model
 Discuss the machine learning model used in this project, including its design, optimization for the Gemmini core, and any unique features or challenges associated with its implementation and integration into the overall system.
