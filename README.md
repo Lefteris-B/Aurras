@@ -8,7 +8,7 @@ A cornerstone of our approach is the novel application of Large Language Models 
 
 The integration of LLMs for configuration generation represents a groundbreaking approach to hardware design, promising to streamline the development process and unlock new efficiencies in the creation of specialized computing solutions. This project not only aims to advance the field of embedded AI applications but also to establish a new paradigm for leveraging generative AI in hardware development.
 
-[Back to Top](#Aurras-Accelerated-Keyword-Spotting-on-Caravel-SoC)
+[↟Back to Top](#Aurras-Accelerated-Keyword-Spotting-on-Caravel-SoC)
 
 
 
@@ -37,7 +37,7 @@ The primary goals of this project are to demonstrate state-of-the-art capabiliti
 
 By meeting these objectives, we aim to push the boundaries of what's possible in embedded AI applications, providing a versatile, efficient, and accessible platform for research and development in the field of keyword spotting and beyond.
 
-[Back to Top](# Aurras: Accelerated Keyword Spotting on Caravel SoC)
+[↟ Back to Top](#Aurras-Accelerate-Keyword-Spotting-on-Caravel-SoC)
 
 ## Prompt Methodology
 The Prompt Methodology is a central aspect of our approach to leveraging generative AI within the hardware design process. We use advanced prompt engineering techniques to facilitate complex reasoning and context-aware responses from the AI models, tailored specifically for digital design tasks.
@@ -65,7 +65,7 @@ The main intent of this process is to gather a sequence of steps with an intent 
 
 For a deeper understanding of the techniques used, please refer to the paper by J. Wei et al.: “Chain-of-Thought Prompting Elicits Reasoning in Large Language Models,” 2022, doi: [10.48550/ARXIV.2201.11903](https://doi.org/10.48550/ARXIV.2201.11903).
 
-[Back to Top](#Aurras-Accelerated-Keyword-Spotting-on-Caravel-SoC)
+[↟Back to Top](#Aurras-Accelerated-Keyword-Spotting-on-Caravel-SoC)
 
 ## Architecture
 The architecture of our hardware accelerator is meticulously designed to balance performance, efficiency, and scalability. It is crucial for enabling the complex computations required for Keyword Spotting (KWS) while maintaining energy efficiency and optimizing the use of silicon area.
@@ -100,7 +100,7 @@ The Chipyard CPU, serving as the application core in our system, plays an instru
 Configuration files play a pivotal role in customizing the operation of our hardware system to match specific use cases and requirements. These files dictate the behavior of the hardware by setting parameters such as data precision, memory allocation, power settings, and processing speeds. For our KWS application, the configuration files will be crucial for fine-tuning the system's performance to the algorithm's needs. We plan to use Large Language Models (LLMs) to aid in the creation of these config files. By providing the LLM with the KWS algorithm requirements, we can generate configuration files that are optimized for those criteria, ensuring that the system operates under the ideal conditions for each task.
 
 ### Full system visibility enables performance profiling.
-Full system and full stack visibility are critical for diagnosing performance bottlenecks and optimizing system behavior. By providing a holistic view of the system's operation, we can identify issues such as resource contention, where multiple processes compete for the same hardware resources, leading to inefficiencies. Cache coherence protocols are monitored to prevent stale data within multi-level cache hierarchies, while miss rates and latencies are analyzed to optimize memory access patterns. Page faults and TLB (Translation Lookaside Buffer) hits are scrutinized to enhance virtual memory management. 
+Full system is critical for diagnosing performance bottlenecks and optimizing system behavior. By providing a holistic view of the system's operation, we can identify issues such as resource contention, where multiple processes compete for the same hardware resources, leading to inefficiencies. Cache coherence protocols are monitored to prevent stale data within multi-level cache hierarchies, while miss rates and latencies are analyzed to optimize memory access patterns. Page faults and TLB (Translation Lookaside Buffer) hits are scrutinized to enhance virtual memory management. 
 
 Additionally, visibility into unaccelerated kernels helps identify potential areas for hardware acceleration. Monitoring interrupts and context switches is vital for understanding the system's responsiveness and the overhead incurred by the operating system. Through Chipyard's SoC, we have the capabilities to instrument and observe these various metrics, providing a full system perspective that spans from the hardware level to the software stack. This allows for a comprehensive performance analysis, enabling developers to make informed decisions to fine-tune both the hardware configuration and the software to work in concert, thereby improving overall system performance and efficiency.
 
@@ -136,7 +136,7 @@ Using the Wishbone bus, a time-tested and reliable standard for SoC interconnect
 
 Through this communication framework, the application core can offload data processing tasks to the Gemmini accelerator and then coordinate with the management core to handle interrupts, manage power, and oversee other system-wide tasks. This collaboration ensures that the accelerator can function at its highest efficiency without being bottlenecked by data transfer limitations.
 
-[Back to Top](# Aurras: Accelerated Keyword Spotting on Caravel SoC)
+[↟Back to Top](#Aurras-Accelerated-Keyword-Spotting-on-Caravel-SoC)
 
 ## Machine Learning Model
 Discuss the machine learning model used in this project, including its design, optimization for the Gemmini core, and any unique features or challenges associated with its implementation and integration into the overall system.
