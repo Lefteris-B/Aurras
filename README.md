@@ -60,18 +60,27 @@ The main intent of this process is to gather a sequence of steps with an intent 
 - Structure fundamental contextual statements around key ideas (for example, “Provide code that a digital designer would create”).
 - Provide example code for the LLM to follow along using the Chain of Thought prompt engineering technique (for example, “This part of code ‘X’ from my codebase needs new features.”).
 
-For a deeper understanding of the techniques used, please refer to the paper by J. Wei et al.:
-J. Wei et al., “Chain-of-Thought Prompting Elicits Reasoning in Large Language Models,” 2022, doi: [10.48550/ARXIV.2201.11903](https://doi.org/10.48550/ARXIV.2201.11903).
+For a deeper understanding of the techniques used, please refer to the paper by J. Wei et al.: “Chain-of-Thought Prompting Elicits Reasoning in Large Language Models,” 2022, doi: [10.48550/ARXIV.2201.11903](https://doi.org/10.48550/ARXIV.2201.11903).
 
 
 ## Architecture
-This section delves into the specifics of our system's architecture, detailing the interaction between components and the design decisions that drive performance and efficiency.
+The architecture of our hardware accelerator is meticulously designed to balance performance, efficiency, and scalability. It is crucial for enabling the complex computations required for Keyword Spotting (KWS) while maintaining energy efficiency and optimizing the use of silicon area.
+
+### Number Representation
+Choosing the appropriate number representation is pivotal in influencing the accuracy, area, and energy cost of hardware accelerators. Common number systems include integers, floats, and brain floats (bfloats). Integers are typically used for quantized models, offering lower energy cost and area but at a potential loss of accuracy. Floats, including the standard IEEE 754 and bfloat16, provide a wider dynamic range, which is beneficial for maintaining the precision of calculations. Bfloats are a compromise, providing enough precision for deep learning while reducing complexity. The selection of number representation is a critical design decision that impacts the trade-offs between accuracy, computational area, and energy efficiency.
+
+![Number Representation Impact](/images/number_representation.png)
+
+![Energy Cost of Different Number Representations](/images/number_energy_cost.png)
 
 ### Dataflow
-Explains the movement of data through our system, from input to processing to output.
+Gemmini's architecture supports different dataflow optimizations to accommodate various computational needs. "Weight Stationary" dataflow keeps the weights stationary and streams the activations, which can minimize memory access for weights and is efficient when the weights are reused. "Output Stationary" dataflow, on the other hand, keeps the outputs stationary and streams both the weights and activations. This can be advantageous when the output activations need to be reused. The flexibility to choose between these dataflow patterns allows programmers to tailor the hardware accelerator's operation to the specific needs of their application.
+
+![Dataflow Optimizations in Gemmini](/images/dataflow.png)
 
 ### Dimensions
-Details the size, complexity, and scalability of our hardware and software components.
+Our discussions have emphasized that the dimensions of the hardware and software components significantly influence the system's overall capabilities. The size of the hardware components, such as the systolic array in Gemmini, directly correlates with the computational power and throughput. Complexity arises from the integration of multiple components and the need for precise timing and control logic. Scalability is a key design feature, allowing the system to adapt to different KWS models and workloads, ensuring that our accelerator can meet both current and future demands without requiring complete redesigns.
+
 
 ### Pipelining
 Describes how tasks are divided and processed in parallel to improve efficiency.
