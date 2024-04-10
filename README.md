@@ -59,6 +59,7 @@ The main intent of this process is to gather a sequence of steps with an intent 
 - Give the LLM motivation to achieve a certain task (for example, “refactor the code to provide extended functionality”).
 - Structure fundamental contextual statements around key ideas (for example, “Provide code that a digital designer would create”).
 - Provide example code for the LLM to follow along using the Chain of Thought prompt engineering technique (for example, “This part of code ‘X’ from my codebase needs new features.”).
+
 For a deeper understanding of the techniques used, please refer to the paper by J. Wei et al.:
 J. Wei et al., “Chain-of-Thought Prompting Elicits Reasoning in Large Language Models,” 2022, doi: [10.48550/ARXIV.2201.11903](https://doi.org/10.48550/ARXIV.2201.11903).
 
