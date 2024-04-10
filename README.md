@@ -8,7 +8,7 @@ A cornerstone of our approach is the novel application of Large Language Models 
 
 The integration of LLMs for configuration generation represents a groundbreaking approach to hardware design, promising to streamline the development process and unlock new efficiencies in the creation of specialized computing solutions. This project not only aims to advance the field of embedded AI applications but also to establish a new paradigm for leveraging generative AI in hardware development.
 
-[Back to Top](# Aurras: Accelerated Keyword Spotting on Caravel SoC)
+[Back to Top](#Aurras-Accelerated-Keyword-Spotting-on-Caravel-SoC)
 
 
 
@@ -65,7 +65,7 @@ The main intent of this process is to gather a sequence of steps with an intent 
 
 For a deeper understanding of the techniques used, please refer to the paper by J. Wei et al.: “Chain-of-Thought Prompting Elicits Reasoning in Large Language Models,” 2022, doi: [10.48550/ARXIV.2201.11903](https://doi.org/10.48550/ARXIV.2201.11903).
 
-[Back to Top](# Aurras: Accelerated Keyword Spotting on Caravel SoC)
+[Back to Top](#Aurras-Accelerated-Keyword-Spotting-on-Caravel-SoC)
 
 ## Architecture
 The architecture of our hardware accelerator is meticulously designed to balance performance, efficiency, and scalability. It is crucial for enabling the complex computations required for Keyword Spotting (KWS) while maintaining energy efficiency and optimizing the use of silicon area.
@@ -141,14 +141,14 @@ Through this communication framework, the application core can offload data proc
 ## Machine Learning Model
 Discuss the machine learning model used in this project, including its design, optimization for the Gemmini core, and any unique features or challenges associated with its implementation and integration into the overall system.
 
-[Back to Top](# Aurras: Accelerated Keyword Spotting on Caravel SoC)
+[Back to Top](#Aurras-Accelerated-Keyword-Spotting-on-Caravel-SoC)
 
 ## License
 This project is open source under the Apache License 2.0. For more details, see the LICENSE file in the project repository.
 
-[Back to Top](# Aurras: Accelerated Keyword Spotting on Caravel SoC)
+[Back to Top](#Aurras-Accelerated-Keyword-Spotting-on-Caravel-SoC)
 
 ## Acknowledgments
 Recognition of contributions from individuals, organizations, and projects.
 
-[Back to Top](# Aurras: Accelerated Keyword Spotting on Caravel SoC)
+[Back to Top](#Aurras-Accelerated-Keyword-Spotting-on-Caravel-SoC)
