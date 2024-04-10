@@ -1,5 +1,5 @@
-# Aurras: Accelerated Keyword Spotting on Caravel SoC
-[Overview](#overview) | [Objectives](#objectives) | [Architecture](#architecture) | [Getting Started](#getting-started) | [Contributing](#contributing) | [License](#license) | [Acknowledgments](#acknowledgments) | [Contact](#contact)
+# Project Name: Accelerated Keyword Spotting on Caravel SoC
+[Overview](#overview) | [Objectives](#objectives) | [Prompt Methodology](#prompt-methodology) | [Architecture](#architecture) | [Getting Started](#getting-started) | [Contributing](#contributing) | [License](#license) | [Acknowledgments](#acknowledgments)
 
 ## Overview
 This project integrates a Rockchip processor and Gemmini core with the Caravel SoC's RISC-V CPU via the Wishbone bus, focusing on creating an energy-efficient hardware accelerator for Keyword Spotting (KWS) applications.
@@ -9,6 +9,15 @@ This project integrates a Rockchip processor and Gemmini core with the Caravel S
 - **Energy Efficiency**: Optimize for low power consumption.
 - **Integration**: Ensure seamless component interaction through the Wishbone bus.
 - **Open Source**: Develop and maintain as an open-source project.
+
+## Prompt Methodology
+This section explores the strategies and designs behind the AI prompts used in our project, emphasizing their role in achieving efficient and effective AI interactions.
+
+### Prompt Engineering
+Details the process of crafting prompts to effectively communicate with AI models, including considerations for clarity, specificity, and the inclusion of context to guide model responses.
+
+### Prompt Patterns
+Explores common patterns and templates used in our prompts, highlighting how these structures facilitate consistent and reliable AI interactions across different scenarios.
 
 ## Architecture
 This section delves into the specifics of our system's architecture, detailing the interaction between components and the design decisions that drive performance and efficiency.
@@ -68,6 +77,3 @@ Details of the project's open-source license.
 
 ## Acknowledgments
 Recognition of contributions from individuals, organizations, and projects.
-
-## Contact Information
-How to get in touch with the project team for questions and discussions.
