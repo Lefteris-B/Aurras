@@ -139,7 +139,19 @@ Through this communication framework, the application core can offload data proc
 [↟Back to Top](#Aurras-Accelerated-Keyword-Spotting-on-Caravel-SoC)
 
 ## Machine Learning Model
-Discuss the machine learning model used in this project, including its design, optimization for the Gemmini core, and any unique features or challenges associated with its implementation and integration into the overall system.
+
+The integration of Gemmini, an open-source systolic-array architecture generator, with Microsoft's ONNX Runtime engine represents a significant advancement in executing ONNX models on hardware accelerators. Gemmini's design philosophy is rooted in the efficiency of systolic-array architecture, making it exceptionally well-suited for deep learning computations. By integrating with the ONNX Runtime engine, Gemmini extends the runtime's support to include heterogeneous architectures and sophisticated model graph transformations.
+
+This synergy enables Gemmini to efficiently accelerate primary computational kernels essential for deep learning, such as matrix multiplications, convolutions, and pooling operations. One of the key benefits of this integration is the seamless interoperability it offers between the channel layouts expected by Gemmini and the broader ONNX Runtime ecosystem. This compatibility ensures that models developed and optimized for ONNX can be directly deployed on Gemmini without the need for extensive reconfiguration or modification.
+
+Benchmark tests, including evaluations on networks such as ResNet, BERT, and Mask-RCNN, have demonstrated the Gemmini backend's capability to significantly accelerate real-world workloads. The performance gains observed underscore Gemmini's potential as a powerful tool for deep learning acceleration, offering both efficiency and flexibility.
+
+Given Gemmini's proven effectiveness in accelerating a range of neural network architectures, it opens the door to leveraging award-winning and state-of-the-art Keyword Spotting (KWS) models. To harness the full potential of this integration, exploring and adopting award-winning KWS models that are optimized for ONNX compatibility would be a strategic move. These models, known for their high accuracy and efficiency in recognizing keywords within audio streams, can benefit from Gemmini's acceleration capabilities, further enhancing their performance and making them even more suitable for real-time applications.
+
+The suggestion to explore award-winning KWS models aligns with the project's objective to deliver high-performance, energy-efficient KWS solutions. By focusing on models that have already demonstrated excellence in the field, the project can leverage the strengths of Gemmini and ONNX Runtime to achieve superior performance and efficiency.
+
+![Programming Model](/images/programming_model.png)
+
 
 [Back to Top](#Aurras-Accelerated-Keyword-Spotting-on-Caravel-SoC)
 
