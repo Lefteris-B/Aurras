@@ -37,13 +37,29 @@ The primary goals of this project are to demonstrate state-of-the-art capabiliti
 By meeting these objectives, we aim to push the boundaries of what's possible in embedded AI applications, providing a versatile, efficient, and accessible platform for research and development in the field of keyword spotting and beyond.
 
 ## Prompt Methodology
-This section explores the strategies and designs behind the AI prompts used in our project, emphasizing their role in achieving efficient and effective AI interactions.
+The Prompt Methodology is a central aspect of our approach to leveraging generative AI within the hardware design process. We use advanced prompt engineering techniques to facilitate complex reasoning and context-aware responses from the AI models, tailored specifically for digital design tasks.
 
 ### Prompt Engineering
-Details the process of crafting prompts to effectively communicate with AI models, including considerations for clarity, specificity, and the inclusion of context to guide model responses.
+We utilized the Chain Of Thought (CoT) technique for prompt engineering:
 
-### Prompt Patterns
-Explores common patterns and templates used in our prompts, highlighting how these structures facilitate consistent and reliable AI interactions across different scenarios.
+Digital design is a really complex task that requires complex reasoning and produces context-aware responses. These tasks (like creating an FSM) require multiple intermediate reasoning steps.
+
+![Chain of Thought in Prompt Engineering](/images/prompt_eng.png)
+
+### Prompting Patterns
+To refine the process of interacting with LLMs, we employed two specific prompting patterns: "Recipe" and "Persona."
+
+**Recipe**: In order to gather the necessary steps to create a hardware trojan using an LLM, we enhanced our prompt engineering techniques by using the Recipe prompt pattern:
+
+The main intent of this process is to gather a sequence of steps with an intent to create the trojan (for example, “I would like to add ‘X’ feature to my codebase. I need to perform steps A, B, C. Provide a sequence for me and fill in any missing steps.”). Using this pattern, the LLM will analyze a concrete sequence of steps for creating with purpose the trojan (for example, “Identify any unnecessary steps”).
+
+**Persona**: We then used the Persona prompt pattern to:
+
+- Provide the LLM with intent (for example, “Act as a digital engineer”) and conceptualize context (refactor the code, provide Verilog files).
+- Give the LLM motivation to achieve a certain task (for example, “refactor the code to provide extended functionality”).
+- Structure fundamental contextual statements around key ideas (for example, “Provide code that a digital designer would create”).
+- Provide example code for the LLM to follow along using the Chain of Thought prompt engineering technique (for example, “This part of code ‘X’ from my codebase needs new features.”).
+
 
 ## Architecture
 This section delves into the specifics of our system's architecture, detailing the interaction between components and the design decisions that drive performance and efficiency.
