@@ -95,7 +95,7 @@ The Chipyard CPU, serving as the application core in our system, plays an instru
 ### Config Files
 Configuration files play a pivotal role in customizing the operation of our hardware system to match specific use cases and requirements. These files dictate the behavior of the hardware by setting parameters such as data precision, memory allocation, power settings, and processing speeds. For our KWS application, the configuration files will be crucial for fine-tuning the system's performance to the algorithm's needs. We plan to use Large Language Models (LLMs) to aid in the creation of these config files. By providing the LLM with the KWS algorithm requirements, we can generate configuration files that are optimized for those criteria, ensuring that the system operates under the ideal conditions for each task.
 
-### Full System Visibility
+### Full system visibility enables performance profiling.
 Full system and full stack visibility are critical for diagnosing performance bottlenecks and optimizing system behavior. By providing a holistic view of the system's operation, we can identify issues such as resource contention, where multiple processes compete for the same hardware resources, leading to inefficiencies. Cache coherence protocols are monitored to prevent stale data within multi-level cache hierarchies, while miss rates and latencies are analyzed to optimize memory access patterns. Page faults and TLB (Translation Lookaside Buffer) hits are scrutinized to enhance virtual memory management. 
 
 Additionally, visibility into unaccelerated kernels helps identify potential areas for hardware acceleration. Monitoring interrupts and context switches is vital for understanding the system's responsiveness and the overhead incurred by the operating system. Through Chipyard's SoC, we have the capabilities to instrument and observe these various metrics, providing a full system perspective that spans from the hardware level to the software stack. This allows for a comprehensive performance analysis, enabling developers to make informed decisions to fine-tune both the hardware configuration and the software to work in concert, thereby improving overall system performance and efficiency.
@@ -116,8 +116,14 @@ Verification is a critical step to ensure that our system not only meets the des
 ### Functional Coverage
 Functional coverage is a metric used to assess the completeness of our testing and verification efforts. By defining a set of functional scenarios that the system should be able to handle, we can measure how many of these scenarios have been successfully tested. This not only ensures that all features are covered but also helps to identify any gaps in the test plan. In this project, functional coverage provides us with the confidence that our KWS accelerator has been rigorously tested and is ready for deployment. We track coverage statistics to pinpoint which aspects of the design have been thoroughly verified and which may require additional testing and/or optimization.
 
-### Performance Profiling
-Details the techniques used to analyze the system's performance, identify bottlenecks, and optimize efficiency.
+## Hardware acceleration
+
+By using the Chipyard framework, in conjunction with Gemmini,  as a hardware abstraction layer we provide a versatile platform for the end-to-end optimization of the accelerator. 
+
+With a custom compiler stack, the mapping of neural network layers to the DNN accelerator is both sophisticated and efficient. This compiler adeptly translates high-level data representations into low-level microarchitectural commands, ensuring that the internal data flow within the Gemmini accelerator is optimized for speed and energy efficiency. The combination of Chipyard's flexible hardware generation and Gemmini's execution capabilities culminates in a powerful toolchain that can translate binary mappings directly into accelerated computation, unleashing the full potential of the hardware's capabilities.
+
+![Hardware Optimization with Chipyard and Gemmini](/images/optimization.png)
+
 
 ## Machine Learning Model
 Discuss the machine learning model used in this project, including its design, optimization for the Gemmini core, and any unique features or challenges associated with its implementation and integration into the overall system.
