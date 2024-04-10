@@ -2,7 +2,11 @@
 [Overview](#overview) | [Objectives](#objectives) | [Prompt Methodology](#prompt-methodology) | [Architecture](#architecture) | [Machine Learning Model](#machine-learning-model) | [License](#license) | [Acknowledgments](#acknowledgments)
 
 ## Overview
-This project integrates a Rockchip processor and Gemmini core with the Caravel SoC's RISC-V CPU via the Wishbone bus, focusing on creating an energy-efficient hardware accelerator for Keyword Spotting (KWS) applications.
+This project addresses a cutting-edge challenge: leveraging generative AI to develop an open-source hardware accelerator tailored for Keyword Spotting (KWS) applications, implemented on the Caravel System-on-Chip. Our approach harnesses high-level software abstractions, specifically ONNX ([Open Neural Network Exchange](https://onnx.ai/)), to optimize the KWS machine learning model and the audio feature extractor enhancing energy efficiency and seamless integration into the Caravel SoC environment.
+
+We are pioneering the use of an open source and sophisticated hardware abstraction layer, Chipyard ([UCB-BAR Chipyard](https://github.com/ucb-bar/chipyard)), to facilitate the design and integration process. Through Chipyard, we aim to create a specialized application RISC-V core paired with a state-of-the-art AI accelerator, Gemmini ([Gemmini Project](https://github.com/ucb-bar/gemmini)), leveraging the latest advancements in Large Language Models (LLMs) and AI prompting techniques. This innovative combination is poised to set new standards for performance and efficiency in hardware-accelerated KWS, opening new pathways for research and development in embedded AI applications on Caravel SoC([efabless](https://github.com/efabless/caravel)).
+
+
 
 ## Objectives
 - **High Performance**: Utilize the computational capabilities of Rockchip and Gemmini for KWS.
