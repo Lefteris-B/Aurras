@@ -101,6 +101,15 @@ Full system and full stack visibility are critical for diagnosing performance bo
 Additionally, visibility into unaccelerated kernels helps identify potential areas for hardware acceleration. Monitoring interrupts and context switches is vital for understanding the system's responsiveness and the overhead incurred by the operating system. Through Chipyard's SoC, we have the capabilities to instrument and observe these various metrics, providing a full system perspective that spans from the hardware level to the software stack. This allows for a comprehensive performance analysis, enabling developers to make informed decisions to fine-tune both the hardware configuration and the software to work in concert, thereby improving overall system performance and efficiency.
 
 
+### Full Stack Visibility
+Achieving full stack visibility is imperative for fine-grained performance tuning and effective debugging. Gemmini is engineered to offer direct hardware configuration, allowing intricate customization at the hardware level to meet the exact needs of the Keyword Spotting (KWS) application. It operates with a low-level Instruction Set Architecture (ISA), which provides detailed control over the accelerator's operations, enabling the precise timing and manipulation of data flows within the hardware.
+
+Beyond these lower levels of control, Gemmini is also designed to work seamlessly with high-level runtimes such as ONNX, TensorFlow, and PyTorch. This dual capability ensures that developers can operate at the abstraction level most appropriate for their task—whether that's close to the metal for maximum performance tuning or at a higher level for ease of use and flexibility. The high-level integration allows for the rapid deployment of state-of-the-art machine learning models, while the direct hardware access ensures that the underlying accelerator can be finely tuned for optimal performance.
+
+![Full Stack Visibility in Gemmini](/images/full_stack_vis.png)
+
+
+
 ### Verification
 Verification is a critical step to ensure that our system not only meets the design specifications but also performs reliably under real-world conditions. We use a combination of simulation tools and hardware verification languages, to create comprehensive test benches. Also workflow specific test environments help us to verify the functionality of each component and the system as a whole. Additionally, formal verification methods are applied to prove the correctness of algorithms and to find edge-case bugs that are otherwise difficult to detect through traditional testing. Finally test code is run in the simulated core to verify the computational corectness of the system.
 
