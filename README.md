@@ -93,16 +93,13 @@ The Chipyard CPU, serving as the application core in our system, plays an instru
 
 
 ### Config Files
-Outlines the configuration files used to customize the system's operation for various use cases.
+Configuration files play a pivotal role in customizing the operation of our hardware system to match specific use cases and requirements. These files dictate the behavior of the hardware by setting parameters such as data precision, memory allocation, power settings, and processing speeds. For our KWS application, the configuration files will be crucial for fine-tuning the system's performance to the algorithm's needs. We plan to use Large Language Models (LLMs) to aid in the creation of these config files. By providing the LLM with the KWS algorithm requirements, we can generate configuration files that are optimized for those criteria, ensuring that the system operates under the ideal conditions for each task.
 
 ### Verification
-Describes the methods and tools used to ensure the system meets design specifications.
-
-### Simulation
-Covers the simulation tools and environments used to model the system's performance and identify potential issues.
+Verification is a critical step to ensure that our system not only meets the design specifications but also performs reliably under real-world conditions. We use a combination of simulation tools and hardware verification languages, such as SystemVerilog and UVM (Universal Verification Methodology), to create comprehensive test benches. These test environments help us to verify the functionality of each component and the system as a whole. Additionally, formal verification methods are applied to prove the correctness of algorithms and to find edge-case bugs that are otherwise difficult to detect through traditional testing.
 
 ### Functional Coverage
-Explains how we measure the completeness of our testing and verification efforts.
+Functional coverage is a metric used to assess the completeness of our testing and verification efforts. By defining a set of functional scenarios that the system should be able to handle, we can measure how many of these scenarios have been successfully tested. This not only ensures that all features are covered but also helps to identify any gaps in the test plan. In this project, functional coverage provides us with the confidence that our KWS accelerator has been rigorously tested and is ready for deployment. We track coverage statistics to pinpoint which aspects of the design have been thoroughly verified and which may require additional testing.
 
 ### Performance Profiling
 Details the techniques used to analyze the system's performance, identify bottlenecks, and optimize efficiency.
