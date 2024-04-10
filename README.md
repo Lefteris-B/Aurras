@@ -149,6 +149,15 @@ This project is open source under the Apache License 2.0. For more details, see 
 [Back to Top](#Aurras-Accelerated-Keyword-Spotting-on-Caravel-SoC)
 
 ## Acknowledgments
-Recognition of contributions from individuals, organizations, and projects.
+
+This project stands on the shoulders of giants in the open-source community, and we extend our deepest gratitude to the contributors and maintainers of these resources:
+
+- **Chipyard Framework**: A comprehensive hardware development framework that has been instrumental in building our system. [Chipyard](https://github.com/ucb-bar/chipyard) has provided a robust foundation for designing the RISC-V processors and SoC infrastructure integral to our project.
+
+- **Gemmini Accelerator**: The [Gemmini](https://github.com/ucb-bar/gemmini) project has offered us a systolic-array based matrix multiplication accelerator generator that is highly scalable and configurable, perfectly serving our deep learning acceleration needs.
+
+- **KWS Abstraction Layer**: 
+
+Each of these components has been essential in realizing our vision for an efficient, open-source hardware accelerator for KWS applications. Their commitment to open-source ideals has not only made our project possible but also represents the collaborative spirit that drives innovation in the tech community.
 
 [Back to Top](#Aurras-Accelerated-Keyword-Spotting-on-Caravel-SoC)
