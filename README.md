@@ -130,9 +130,9 @@ With a custom compiler stack, the mapping of neural network layers to the DNN ac
 
 ### Core-to-Core Communication: Orchestrating Data Transfer
 
-Effective communication between the application core and the management core is crucial for the smooth operation of any SoC. In our design, the application core—the primary processor handling KWS tasks—communicates with the management core, which oversees the coordination and management of system resources.
+Effective communication between the application core and the management core is crucial for the smooth operation of any SoC. In our design, the application core—the primary processor handling KWS tasks—communicates with the Caravel management core, which oversees the coordination and management of system resources by using the Wishbone bus.
 
-Using the Wishbone bus, a time-tested and reliable standard for SoC interconnect, our system facilitates the transfer of data between the application core and Caravel's management core. This bus architecture is designed to handle high-throughput data transfers with minimal latency, making it an excellent choice for systems where data must move quickly and reliably. It supports a range of transfer types, from simple point-to-point to more complex burst transfers.
+This bus architecture is designed to handle high-throughput data transfers with minimal latency, making it an excellent choice for systems where data must move quickly and reliably. It supports a range of transfer types, from simple point-to-point to more complex burst transfers.
 
 Through this communication framework, the application core can offload data processing tasks to the Gemmini accelerator and then coordinate with the management core to handle interrupts, manage power, and oversee other system-wide tasks. This collaboration ensures that the accelerator can function at its highest efficiency without being bottlenecked by data transfer limitations.
 
@@ -153,7 +153,7 @@ The suggestion to explore award-winning KWS models aligns with the project's obj
 ### PoC: CNN-KWS "Hello Edge" Implementation
 As part of our exploration into optimizing hardware for keyword spotting (KWS) tasks, we will implement the CNN-KWS model, also known as the "Hello Edge" model, as our proof of concept. This model, introduced in the landmark paper "Hello Edge: Keyword Spotting on Microcontrollers" by Zhang et al. (DOI: 10.48550/arXiv.1711.07128), embodies a breakthrough in efficient AI design for edge devices.
 
-Advantages of the CNN-KWS Model
+#### Advantages of the CNN-KWS Model
 Compact Architecture: The CNN-KWS model's design is inherently lightweight, featuring a sequence of convolutional layers followed by fully connected layers. This compactness makes it especially suitable for deployment on resource-constrained hardware platforms.
 
 High Accuracy: Despite its modest size, the CNN-KWS model delivers impressive accuracy, surpassing 90% on renowned datasets such as the Google Speech Commands dataset. This high level of accuracy is vital for practical KWS applications.
@@ -162,13 +162,14 @@ Hardware Compatibility: The model's convolutional and fully connected layers map
 
 Energy Efficiency: Critical for edge computing and battery-operated devices, the CNN-KWS model's architecture is optimized for low power consumption, achieving remarkable energy efficiency without sacrificing accuracy.
 
-Overview of the CNN-KWS Model Architecture
+#### Overview of the CNN-KWS Model Architecture
 Input: Utilizes MFCC features from audio signals, providing a robust representation for voice commands.
 Convolutional Layers: Employs two to three layers with small kernel sizes to capture local patterns within the MFCC features effectively.
 Pooling Layers: Incorporates max pooling to reduce spatial dimensions, ensuring translation invariance.
 Fully Connected Layers: Features one or two layers for learning high-level feature representations and classification.
 Output Layer: Utilizes a softmax layer for keyword class probability distribution, enabling precise keyword detection.
-Optimizing the CNN-KWS Model for Hardware
+
+#### Optimizing the CNN-KWS Model for Hardware
 To further refine the CNN-KWS model for hardware implementation, several optimization techniques can be applied:
 
 Quantization: Transitioning from 32-bit floating-point to 8-bit fixed-point representation reduces computation and storage requirements significantly.
