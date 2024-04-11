@@ -199,7 +199,7 @@ This project stands on the shoulders of giants in the open-source community, and
 
 - **Gemmini Accelerator**: The [Gemmini](https://github.com/ucb-bar/gemmini) project has offered us a systolic-array based matrix multiplication accelerator generator that is highly scalable and configurable, perfectly serving our deep learning acceleration needs.
 
-- **KWS Abstraction Layer**: "Hello Edge: Keyword Spotting on Microcontrollers" by Zhang et al. (2017)[https://doi.org/10.48550/arXiv.1711.07128](https://arxiv.org/abs/1711.07128).
+- **KWS Implementation**: "Hello Edge: Keyword Spotting on Microcontrollers" by Zhang et al. (2017)[https://doi.org/10.48550/arXiv.1711.07128](https://arxiv.org/abs/1711.07128).
 
 Each of these components has been essential in realizing our vision for an efficient, open-source hardware accelerator for KWS applications. Their commitment to open-source ideals has not only made our project possible but also represents the collaborative spirit that drives innovation in the tech community.
 
