@@ -4,7 +4,7 @@
 ## Overview
 This project aims to provide an open-source hardware accelerator for Keyword Spotting (KWS) applications, which will be smoothly incorporated into the Caravel System-on-Chip. Our goal is to improve energy efficiency in the Caravel SoC ecosystem by using the ONNX framework ([Open Neural Network Exchange](https://onnx.ai/)) to optimize the KWS machine learning model and audio feature extraction operations.
 
-One key aspect of our method is using Large Language Models (LLMs) to create configuration files for Chipyard([UCB-BAR Chipyard](https://github.com/ucb-bar/chipyard)), which is an advanced hardware abstraction layer developed by UCB-BAR([UCB-BAR](https://bar.eecs.berkeley.edu/)). The LLM-generated configurations are designed using the most recent breakthroughs in AI prompting for the development of a customized application RISC-V core with an AI accelerator based on the Gemmini Project([Gemmini Project](https://github.com/ucb-bar/gemmini)). Chipyard uses these configurations to build the necessary Verilog files for the application core and the AI accelerator. This process helps bridge the gap between high-level ideation and hardware implementation.
+One key aspect of our method is using Large Language Models (LLMs) to create configuration files for ([Chipyard](https://github.com/ucb-bar/chipyard)), which is an advanced hardware abstraction layer developed by ([UCB-BAR](https://bar.eecs.berkeley.edu/)). The LLM-generated configurations are designed using the most recent breakthroughs in AI prompting for the development of a customized application RISC-V core with an AI accelerator based on the ([Gemmini Project](https://github.com/ucb-bar/gemmini)). Chipyard uses these configurations to build the necessary Verilog files for the application core and the AI accelerator. This process helps bridge the gap between high-level ideation and hardware implementation.
 
 The integration of LLMs for configuration generation represents a groundbreaking approach to hardware design, promising to streamline the development process and unlock new efficiencies in the creation of specialized computing solutions. This project not only aims to advance the field of embedded AI applications but also to establish a new paradigm for leveraging generative AI in hardware development.
 
@@ -151,7 +151,7 @@ The suggestion to explore award-winning KWS models aligns with the project's obj
 ![Programming Model](/images/programming_model.png)
 
 ### PoC: CNN-KWS "Hello Edge" Implementation
-As part of our exploration into optimizing hardware for keyword spotting (KWS) tasks, we will implement the CNN-KWS model, also known as the "Hello Edge" model, as our proof of concept. This model, introduced in the landmark paper "Hello Edge: Keyword Spotting on Microcontrollers" by Zhang et al. (DOI: 10.48550/arXiv.1711.07128), embodies a breakthrough in efficient AI design for edge devices.
+As part of our exploration into optimizing hardware for keyword spotting (KWS) tasks, we will implement the CNN-KWS model, also known as the "Hello Edge" model, as our proof of concept. This model, introduced in the landmark paper "Hello Edge: Keyword Spotting on Microcontrollers" by Zhang et al. [DOI: 10.48550/arXiv.1711.07128](https://arxiv.org/abs/1711.07128), embodies a breakthrough in efficient AI design for edge devices.
 
 #### Advantages of the CNN-KWS Model
 Compact Architecture: The CNN-KWS model's design is inherently lightweight, featuring a sequence of convolutional layers followed by fully connected layers. This compactness makes it especially suitable for deployment on resource-constrained hardware platforms.
@@ -199,7 +199,7 @@ This project stands on the shoulders of giants in the open-source community, and
 
 - **Gemmini Accelerator**: The [Gemmini](https://github.com/ucb-bar/gemmini) project has offered us a systolic-array based matrix multiplication accelerator generator that is highly scalable and configurable, perfectly serving our deep learning acceleration needs.
 
-- **KWS Abstraction Layer**: "Hello Edge: Keyword Spotting on Microcontrollers" by Zhang et al. (2017)[Paper](https://arxiv.org/abs/1711.07128).
+- **KWS Abstraction Layer**: "Hello Edge: Keyword Spotting on Microcontrollers" by Zhang et al. (2017)[https://doi.org/10.48550/arXiv.1711.07128](https://arxiv.org/abs/1711.07128).
 
 Each of these components has been essential in realizing our vision for an efficient, open-source hardware accelerator for KWS applications. Their commitment to open-source ideals has not only made our project possible but also represents the collaborative spirit that drives innovation in the tech community.
 
