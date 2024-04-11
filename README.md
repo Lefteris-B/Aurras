@@ -144,13 +144,43 @@ The integration of Gemmini, an open-source systolic-array architecture generator
 
 This synergy enables Gemmini to efficiently accelerate primary computational kernels essential for deep learning, such as matrix multiplications, convolutions, and pooling operations. One of the key benefits of this integration is the seamless interoperability it offers between the channel layouts expected by Gemmini and the broader ONNX Runtime ecosystem. This compatibility ensures that models developed and optimized for ONNX can be directly deployed on Gemmini without the need for extensive reconfiguration or modification.
 
-Benchmark tests, including evaluations on networks such as ResNet, BERT, and Mask-RCNN, have demonstrated the Gemmini backend's capability to significantly accelerate real-world workloads. The performance gains observed underscore Gemmini's potential as a powerful tool for deep learning acceleration, offering both efficiency and flexibility.
-
 Given Gemmini's proven effectiveness in accelerating a range of neural network architectures, it opens the door to leveraging award-winning and state-of-the-art Keyword Spotting (KWS) models. To harness the full potential of this integration, exploring and adopting award-winning KWS models that are optimized for ONNX compatibility would be a strategic move. These models, known for their high accuracy and efficiency in recognizing keywords within audio streams, can benefit from Gemmini's acceleration capabilities, further enhancing their performance and making them even more suitable for real-time applications.
 
 The suggestion to explore award-winning KWS models aligns with the project's objective to deliver high-performance, energy-efficient KWS solutions. By focusing on models that have already demonstrated excellence in the field, the project can leverage the strengths of Gemmini and ONNX Runtime to achieve superior performance and efficiency.
 
 ![Programming Model](/images/programming_model.png)
+
+### PoC: CNN-KWS "Hello Edge" Implementation
+As part of our exploration into optimizing hardware for keyword spotting (KWS) tasks, we will implement the CNN-KWS model, also known as the "Hello Edge" model, as our proof of concept. This model, introduced in the landmark paper "Hello Edge: Keyword Spotting on Microcontrollers" by Zhang et al. (DOI: 10.48550/arXiv.1711.07128), embodies a breakthrough in efficient AI design for edge devices.
+
+Advantages of the CNN-KWS Model
+Compact Architecture: The CNN-KWS model's design is inherently lightweight, featuring a sequence of convolutional layers followed by fully connected layers. This compactness makes it especially suitable for deployment on resource-constrained hardware platforms.
+
+High Accuracy: Despite its modest size, the CNN-KWS model delivers impressive accuracy, surpassing 90% on renowned datasets such as the Google Speech Commands dataset. This high level of accuracy is vital for practical KWS applications.
+
+Hardware Compatibility: The model's convolutional and fully connected layers map efficiently onto hardware resources, such as multiply-accumulate (MAC) units and memory buffers. This compatibility facilitates parallel and pipelined execution, enhancing performance.
+
+Energy Efficiency: Critical for edge computing and battery-operated devices, the CNN-KWS model's architecture is optimized for low power consumption, achieving remarkable energy efficiency without sacrificing accuracy.
+
+Overview of the CNN-KWS Model Architecture
+Input: Utilizes MFCC features from audio signals, providing a robust representation for voice commands.
+Convolutional Layers: Employs two to three layers with small kernel sizes to capture local patterns within the MFCC features effectively.
+Pooling Layers: Incorporates max pooling to reduce spatial dimensions, ensuring translation invariance.
+Fully Connected Layers: Features one or two layers for learning high-level feature representations and classification.
+Output Layer: Utilizes a softmax layer for keyword class probability distribution, enabling precise keyword detection.
+Optimizing the CNN-KWS Model for Hardware
+To further refine the CNN-KWS model for hardware implementation, several optimization techniques can be applied:
+
+Quantization: Transitioning from 32-bit floating-point to 8-bit fixed-point representation reduces computation and storage requirements significantly.
+
+Pruning: Eliminating non-essential weights or connections streamlines the model, decreasing complexity and enhancing efficiency without compromising accuracy.
+
+Architectural Optimizations: Investigating architectural variations, such as depthwise separable convolutions or incorporating residual connections, can offer substantial gains in both efficiency and performance.
+
+Leveraging generative AI, we aim to refine the CNN-KWS model's architecture further, employing strategies like quantization and pruning to enhance hardware suitability. Additionally, generative AI will aid in generating optimized HDL code for the model's implementation, ensuring a seamless transition from model to hardware.
+
+
+This comprehensive approach underscores our commitment to advancing KWS technology, showcasing the potential of integrating sophisticated AI models with state-of-the-art hardware design methodologies.
 
 
 [Back to Top](#Aurras-Accelerated-Keyword-Spotting-on-Caravel-SoC)
