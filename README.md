@@ -2,9 +2,9 @@
 [Overview](#overview) | [Objectives](#objectives) | [Prompt Methodology](#prompt-methodology) | [Architecture](#architecture) | [Machine Learning Model](#machine-learning-model) | [License](#license) | [Acknowledgments](#acknowledgments)
 
 ## Overview
-This project tackles the ambitious goal of developing an open-source hardware accelerator for Keyword Spotting (KWS) applications, seamlessly integrated into the Caravel System-on-Chip. By leveraging the ONNX framework ([Open Neural Network Exchange](https://onnx.ai/)), we aim to optimize both the KWS machine learning model and audio feature extraction processes, enhancing energy efficiency within the Caravel SoC ecosystem.
+This project aims to provide an open-source hardware accelerator for Keyword Spotting (KWS) applications, which will be smoothly incorporated into the Caravel System-on-Chip. Our goal is to improve energy efficiency in the Caravel SoC ecosystem by using the ONNX framework ([Open Neural Network Exchange](https://onnx.ai/)) to optimize the KWS machine learning model and audio feature extraction operations.
 
-A cornerstone of our approach is the novel application of Large Language Models (LLMs) in the generation of configuration files for Chipyard ([UCB-BAR Chipyard](https://github.com/ucb-bar/chipyard)), a sophisticated hardware abstraction layer. These LLM-generated configurations,aligning with the latest advancements in AI prompting techniques, tailor the creation of an application-specific RISC-V core and a Gemmini-based AI accelerator ([Gemmini Project](https://github.com/ucb-bar/gemmini)). Subsequently, Chipyard utilizes these configurations to generate the Verilog files necessary for the application core and the AI accelerator, bridging the gap between high-level conceptualization and hardware realization.
+One key aspect of our method is using Large Language Models (LLMs) to create configuration files for Chipyard([UCB-BAR Chipyard](https://github.com/ucb-bar/chipyard)), which is an advanced hardware abstraction layer developed by UCB-BAR([UCB-BAR](https://bar.eecs.berkeley.edu/)). The LLM-generated configurations are designed using the most recent breakthroughs in AI prompting for the development of a customized application RISC-V core with an AI accelerator based on the Gemmini Project([Gemmini Project](https://github.com/ucb-bar/gemmini)). Chipyard uses these configurations to build the necessary Verilog files for the application core and the AI accelerator. This process helps bridge the gap between high-level ideation and hardware implementation.
 
 The integration of LLMs for configuration generation represents a groundbreaking approach to hardware design, promising to streamline the development process and unlock new efficiencies in the creation of specialized computing solutions. This project not only aims to advance the field of embedded AI applications but also to establish a new paradigm for leveraging generative AI in hardware development.
 
@@ -198,7 +198,7 @@ This project stands on the shoulders of giants in the open-source community, and
 
 - **Gemmini Accelerator**: The [Gemmini](https://github.com/ucb-bar/gemmini) project has offered us a systolic-array based matrix multiplication accelerator generator that is highly scalable and configurable, perfectly serving our deep learning acceleration needs.
 
-- **KWS Abstraction Layer**: 
+- **KWS Abstraction Layer**: "Hello Edge: Keyword Spotting on Microcontrollers" by Zhang et al. (2017)[Paper](https://arxiv.org/abs/1711.07128).
 
 Each of these components has been essential in realizing our vision for an efficient, open-source hardware accelerator for KWS applications. Their commitment to open-source ideals has not only made our project possible but also represents the collaborative spirit that drives innovation in the tech community.
 
