@@ -193,7 +193,8 @@ This project is open source under the Apache License 2.0. For more details, see 
 
 ## Acknowledgments
 
-This project stands on the shoulders of giants in the open-source community, and we extend our deepest gratitude to the contributors and maintainers of these resources:
+This project stands on the shoulders of giants in the open-source community, 
+and we extend our deepest gratitude to the contributors and maintainers of these resources:
 
 - **Chipyard Framework**: A comprehensive hardware development framework that has been instrumental in building our system. [Chipyard](https://github.com/ucb-bar/chipyard) has provided a robust foundation for designing the RISC-V processors and SoC infrastructure integral to our project.
 
